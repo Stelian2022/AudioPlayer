@@ -9,7 +9,7 @@
   position: relative;
   overflow: hidden;
   width: 90%;
-  height: 40vh;
+  height: 50px;
   display: flex;
   margin-left: 1.5rem;
   box-shadow: 15px 15px 20px 15px rgb(202, 198, 198);
@@ -69,7 +69,7 @@ h2 {
   }
   h2 {
     position: absolute;
-    top: 86vh;
+    top: 50vh;
     left: 50%;
   }
   #slider {
@@ -84,7 +84,7 @@ h2 {
   }
   .time {
     position: absolute;
-    top: 90%;
+    top: 55VH;
     border: 1px solid black;
     width: 70%;
 
@@ -93,7 +93,7 @@ h2 {
   .volum {
     display: flex;
     flex-direction: column;
-    top: 30vh;
+    top: 20vh;
     left: 5rem;
     font-size: 3rem;
   }
@@ -103,7 +103,7 @@ h2 {
 
     font-size: 3rem;
     padding: 1rem;
-    top: 82%;
+    top: 60VH;
   }
   #mp3Player {
     border: 1px solid black;
