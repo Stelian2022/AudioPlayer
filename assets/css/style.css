@@ -1,0 +1,116 @@
+#mp3Player {
+  border: 1px solid black;
+  width: 100%;
+  height: 80vh;
+  background-color: black;
+  box-shadow: 15px 15px 15px;
+}
+#slider {
+  position: relative;
+  overflow: hidden;
+  width: 90%;
+  height: 40vh;
+  display: flex;
+  margin-left: 1.5rem;
+  box-shadow: 15px 15px 20px 15px rgb(202, 198, 198);
+}
+#slider img {
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+h2 {
+  font-family: cursive;
+  color: rgb(245, 236, 236);
+  text-align: center;
+}
+.play {
+  /* position: absolute; */
+  left: 35%;
+  font-size: 3rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+.time input {
+  margin-left: 30%;
+  background-color: rgb(29, 74, 151);
+  width: 10rem;
+  border: none;
+}
+.sonBar {
+  border: solid;
+}
+.bar {
+  width: 10%;
+  background-color: rgb(36, 0, 128);
+}
+.time {
+  position: absolute;
+  top: 55vh;
+  border: 1px solid black;
+  width: 80%;
+  margin-left: 10%;
+  background-color: rgb(29, 74, 151);
+}
+.volum {
+  color: white;
+  position: absolute;
+  top: 60vh;
+  left: 37%;
+  font-size: 3rem;
+}
+
+@media screen and (min-width: 576px) {
+  #mp3Player {
+    display: flex;
+    justify-content: center;
+  }
+  h2 {
+    position: absolute;
+    top: 86vh;
+    left: 50%;
+  }
+  #slider {
+    margin-left: 15rem;
+    width: 70vw;
+    height: 80vh;
+  }
+
+  .bar {
+    width: 10%;
+    background-color: rgb(36, 0, 128);
+  }
+  .time {
+    position: absolute;
+    top: 90%;
+    border: 1px solid black;
+    width: 70%;
+
+    left: 8vh;
+  }
+  .volum {
+    display: flex;
+    flex-direction: column;
+    top: 30vh;
+    left: 5rem;
+    font-size: 3rem;
+  }
+  .play {
+    position: absolute;
+    left: 50%;
+
+    font-size: 3rem;
+    padding: 1rem;
+    top: 82%;
+  }
+  #mp3Player {
+    border: 1px solid black;
+    width: 100%;
+    height: 95vh;
+
+    background-color: blue;
+    box-shadow: 15px 15px 15px;
+  }
+}
