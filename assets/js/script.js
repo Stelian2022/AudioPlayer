@@ -1,13 +1,17 @@
 import { playlist } from "./playlist.js";
 import { sliderManager } from "./slider.js";
+import { audioManager } from "./audio.js";
 // let state=0;
 
 globalThis.state = 0;
 globalThis.playlist = playlist;
 globalThis.nextButton = document.querySelector(".fa-forward-fast");
 globalThis.prevButton = document.querySelector(".fa-backward-fast");
+globalThis.playPauseButton = document.querySelector(".fa-circle-play");
+globalThis.audio=new Audio(playlist[state].mp3);
 
 sliderManager("init");
+audioManager("init");
 console.log(playlist.length);
 nextButton.addEventListener("click", function () {
   if (state < playlist.length - 1) {
@@ -17,6 +21,7 @@ nextButton.addEventListener("click", function () {
   }
 
   sliderManager("next");
+  audioManager("next");
 });
 
 prevButton.addEventListener("click", function () {
@@ -26,4 +31,14 @@ prevButton.addEventListener("click", function () {
     state = playlist.length - 1;
   }
   sliderManager("prev");
+  audioManager("prev");
+});
+playPauseButton.addEventListener("click", function () {
+
+  
+audioManager("playPause");
+
+  
+
+
 });
