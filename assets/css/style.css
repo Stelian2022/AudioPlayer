@@ -9,15 +9,18 @@
   position: relative;
   overflow: hidden;
   width: 90%;
-  height: 50px;
+ height: 300px;  
   display: flex;
   margin-left: 1.5rem;
   box-shadow: 15px 15px 20px 15px rgb(202, 198, 198);
+  transition: all .5s;
 }
 #slider img {
   width: 100%;
+  /* height: 350px; */
   position: absolute;
-  overflow: hidden;
+
+  transition: all .10s;
 }
 h2 {
   font-family: cursive;
@@ -48,17 +51,18 @@ h2 {
 }
 .time {
   position: absolute;
-  top: 55vh;
+  top: 50vh;
   border: 1px solid black;
   width: 80%;
-  margin-left: 10%;
+  left: 3rem;
+  /* margin-left: 10%; */
   background-color: rgb(29, 74, 151);
 }
 .volum {
   color: white;
   position: absolute;
-  top: 60vh;
-  left: 37%;
+  top: 55vh;
+  left: 34%;
   font-size: 3rem;
 }
 
@@ -69,13 +73,16 @@ h2 {
   }
   h2 {
     position: absolute;
-    top: 50vh;
-    left: 50%;
+    top: 25vh;
+    font-size: 5rem;
   }
   #slider {
-    margin-left: 15rem;
-    width: 70vw;
-    height: 80vh;
+    /* margin-left: 5rem; */
+    width: 70%;
+    /* height: 600px; */
+  }
+  #slider img {
+    /* height: 600px; */
   }
 
   .bar {
@@ -83,34 +90,49 @@ h2 {
     background-color: rgb(36, 0, 128);
   }
   .time {
-    position: absolute;
-    top: 55VH;
+    /* position: absolute; */
+    top: 55vh;
     border: 1px solid black;
-    width: 70%;
 
-    left: 8vh;
+    left: 10rem;
+    width: 80%;
   }
   .volum {
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     top: 20vh;
     left: 5rem;
     font-size: 3rem;
   }
   .play {
     position: absolute;
-    left: 50%;
+    left: 40%;
 
     font-size: 3rem;
     padding: 1rem;
-    top: 60VH;
+    top: 48vh;
+  }
+  .sonBar {
+    height: 15vh;
+    width: 1rem;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: -50px;
+  }
+  .volum {
+    color: white;
+
+    width: 5rem;
+
+    font-size: 3rem;
   }
   #mp3Player {
     border: 1px solid black;
     width: 100%;
     height: 95vh;
 
-    background-color: blue;
+    background-color: black;
     box-shadow: 15px 15px 15px;
   }
 }
