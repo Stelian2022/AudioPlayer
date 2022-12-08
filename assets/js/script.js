@@ -10,6 +10,7 @@ globalThis.prevButton = document.querySelector(".fa-backward-fast");
 globalThis.playPauseButton = document.querySelector(".fa-circle-play");
 globalThis.audio=new Audio(playlist[state].mp3);
 
+
 sliderManager("init");
 audioManager("init");
 console.log(playlist.length);
