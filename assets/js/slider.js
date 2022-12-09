@@ -1,6 +1,7 @@
 function transImg(direction) {
   const sliderImg = document.querySelector("#slider img");
   const slider = document.querySelector("#slider");
+ 
   //etape 1 crée une deuxieme image sous la premiere
   const newSliderImg = document.createElement("img");
   newSliderImg.src = playlist[state].cover;
@@ -9,6 +10,7 @@ function transImg(direction) {
   sliderImg.style.zIndex = "2";
 
   //etape 2 sortir image avec un effet
+
   slider.append(newSliderImg);
   //sliderImg.style.left ="-" + sliderImg.clientWidth +"px"; ne marche pas
   sliderImg.style.transition = "all .5s";
@@ -16,6 +18,7 @@ function transImg(direction) {
 
   setTimeout(function () {
     sliderImg.src = playlist[state].cover;
+    
     //etape 3 : reattribuer le crs du state actuel a sliderImg
 
     sliderImg.style.transition = "none";
@@ -45,10 +48,11 @@ function sliderManager(sliderState) {
   switch (sliderState) {
     case "init":
       sliderImg.src = playlist[state].cover;
-      
+      title.scr =  playlist[state].title;
       break;
     case "next":
       transImg("+");
+      
       break;
     case "prev":
       transImg("-");

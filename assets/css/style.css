@@ -21,14 +21,14 @@
 
   transition: all 0.1s;
 }
-h2 {
+
+
+h2, h3, h4, h5 {
   font-family: cursive;
   color: rgb(245, 236, 236);
   text-align: center;
 }
- .fa-circle-pause{
-  display: none;
-} 
+ 
 .play {
   /* position: absolute; */
   left: 35%;
@@ -53,7 +53,7 @@ h2 {
 }
 .time {
   position: absolute;
-  top: 50vh;
+  top: 55vh;
   border: 1px solid black;
   width: 80%;
   left: 3rem;
@@ -63,24 +63,34 @@ h2 {
 .volum {
   color: white;
   position: absolute;
-  top: 55vh;
+  top: 70vh;
   left: 34%;
   font-size: 3rem;
 }
 
 @media screen and (min-width: 576px) {
+  body{
+    margin: 0;
+    padding: 0;
+
+  }
   #mp3Player {
     display: flex;
     justify-content: center;
+    flex-direction: column;
   }
   h2 {
-    position: absolute;
-    top: 25vh;
-    font-size: 5rem;
+    /* position: absolute; */
+    /* top: 25vh; */
+    /* padding-left: 7rem; */
+    font-size: 3rem;
+   padding: 0;
+  
   }
   #slider {
     /* margin-left: 5rem; */
-    width: 70%;
+    width: 90%;
+     left: 5rem; 
     /* height: 600px; */
   }
 
@@ -90,34 +100,43 @@ h2 {
   }
   .time {
     /* position: absolute; */
-    top: 55vh;
+    top: 70vh;
     border: 1px solid black;
 
     left: 10rem;
     width: 80%;
   }
   .volum {
-    /* display: flex;
-    flex-direction: column; */
-    top: 20vh;
-    left: 5rem;
+     display: flex;
+    flex-direction: column; 
+
+    top: 10vh;
+    left: 1rem;
     font-size: 3rem;
   }
+  #title{
+    height: 50vh;
+   }
   .play {
-    position: absolute;
-    left: 40%;
-
+    /* position: absolute; */
+    /* left: 20%; */
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    height: 10vh;
+    width: 50vw;
     font-size: 3rem;
     padding: 1rem;
-    top: 48vh;
+margin-left: 20rem;
+    
   }
   .sonBar {
     height: 15vh;
     width: 1rem;
     background-color: white;
-    position: absolute;
-    top: 0;
-    left: -50px;
+    /* position: absolute; */
+ margin-left: 0.7rem;
+    /* left: -50px; */
   }
   .volum {
     color: white;

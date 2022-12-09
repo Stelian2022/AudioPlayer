@@ -8,7 +8,13 @@ globalThis.playlist = playlist;
 globalThis.nextButton = document.querySelector(".fa-forward-fast");
 globalThis.prevButton = document.querySelector(".fa-backward-fast");
 globalThis.playPauseButton = document.querySelector(".fa-circle-play");
+globalThis.playPauseIcon = document.querySelector(".fa-circle-play");
 globalThis.audio=new Audio(playlist[state].mp3);
+globalThis.title =document.createElement("title");
+
+
+globalThis.newAudio = document.createElement("mp3");
+globalThis.newAudio.src = playlist[state].mp3;
 
 
 sliderManager("init");
@@ -43,3 +49,4 @@ audioManager("playPause");
 
 
 });
+
