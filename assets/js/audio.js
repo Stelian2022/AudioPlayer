@@ -8,6 +8,7 @@ function audioManager(audioState) {
   const newAudio = document.createElement("mp3");
   audio.src = playlist[state].mp3;
   const playPauseIcon = document.querySelector(".fa-circle-pause");
+  
   const newTitle = document.createElement("title");
   newTitle.scr = playlist[state].title;
   const title = document.querySelector("#title h2");

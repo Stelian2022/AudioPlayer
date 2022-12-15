@@ -12,6 +12,12 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"
+      integrity="sha512-UXumZrZNiOwnTcZSHLOfcTs0aos2MzBWHXOHOuB0J/R44QB0dwY5JgfbvljXcklVf65Gc4El6RjZ+lnwd2az2g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="./assets/js/script.js" defer type="module"></script>
 
     <title>AudioPlayer</title>
@@ -45,8 +51,12 @@
 
         <i class="fa-solid fa-volume-high"></i>
         <i class="fa-solid fa-circle-plus"></i>
-        <div class="sonBar"></div>
+        <div class="sonBar">
+          <input type="range" id="volumeButton" min="0" max="100" value="50">
+        </div>
       </div>
     </div>
+
+    
   </body>
 </html>
