@@ -7,7 +7,9 @@ function volumeManager(volumeState) {
       audio.volume = volumeButton.value / 100;
       break;
     case "pan":
-      
+      audio.volume = volumeButton.value / 1;
+
+
 
       // mc.on("pan", function (e) {
       //   console.dir(e.type);

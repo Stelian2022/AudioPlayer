@@ -70,6 +70,13 @@ sonBar.addEventListener("change", function(){
   volumeManager("range");
   
 })
+sonBar.addEventListener(
+   "change",
+   () => {
+     volumeManager("pan");
+   },
+   false
+ );
 hammertime.on('panleft panright', function(e) {
   console.log(e.type);
 });
