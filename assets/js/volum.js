@@ -6,12 +6,17 @@ function volumeManager(volumeState) {
     case "range":
       audio.volume = volumeButton.value / 100;
       break;
-      case "pan":
-
+    case "pan":
       
-        break;
+
+      // mc.on("pan", function (e) {
+      //   console.dir(e.type);
+      // });
+
+      break;
     default:
       break;
   }
 }
+
 export { volumeManager };
