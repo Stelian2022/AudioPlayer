@@ -60,3 +60,13 @@ volumeButton.addEventListener("change", function(){
   console.dir(volumeButton.value);
   volumeManager("range")
 })
+mc.on("panright", function(){
+
+if(audio.volume<1){
+
+
+console.log("panright");
+audio.volume += 0.05;
+volumeButton.value = audio.volume*100;
+}
+})
