@@ -68,5 +68,16 @@ playPauseButton.addEventListener("click", function () {
 sonBar.addEventListener("change", function(){
   console.dir(volumeButton.value);
   volumeManager("range");
-  
 })
+
+  mc.on("panright", function(){
+    console.log('panright');
+    if(audio.volume<1){
+
+      audio.volume+=0.05;
+      volumeButton.value=audio.volume*100;
+
+    }
+    
+  })
+  
