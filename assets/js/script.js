@@ -39,6 +39,7 @@ function nextTrack() {
 
   sliderManager("next");
   audioManager("next");
+  timeManager("next");
 }
 
 function prevTrack() {
@@ -49,6 +50,7 @@ function prevTrack() {
   }
   sliderManager("prev");
   audioManager("prev");
+  timeManager("prev");
 }
 
 mc.on("swiperight", nextTrack);
