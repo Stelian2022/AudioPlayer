@@ -6,16 +6,21 @@ function volumeManager(volumeState) {
     case "range":
       audio.volume = volumeButton.value / 100;
       break;
-    case "pan":
-      audio.volume = volumeButton.value / 1;
-
-
-
-      // mc.on("pan", function (e) {
-      //   console.dir(e.type);
-      // });
+    case "panright":
+      if (audio.volume + 0.01 < 1) {
+        audio.volume += 0.01;
+        volumeButton.value = audio.volume * 100;
+      }
 
       break;
+    case "panleft":
+      if (audio.volume - 0.01 >= 0) {
+        audio.volume -= 0.01;
+        volumeButton.value = audio.volume * 100;
+      }
+
+      break;
+
     default:
       break;
   }
