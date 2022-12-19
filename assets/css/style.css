@@ -47,8 +47,11 @@ h2, h3, h4, h5 {
   width: 10rem;
   border: none;
 }
-.sonBar {
+#sonBar {
   border: solid;
+  height: 3rem;
+  width: 100%;
+  
 }
 .bar {
   width: 10%;
@@ -56,7 +59,7 @@ h2, h3, h4, h5 {
 }
 .time {
   position: absolute;
-  top: 60vh;
+  top: 72vh;
   border: 1px solid black;
   width: 80%;
   left: 3rem;

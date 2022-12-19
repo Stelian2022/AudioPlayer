@@ -10,14 +10,22 @@ globalThis.nextButton = document.querySelector(".fa-forward-fast");
 globalThis.prevButton = document.querySelector(".fa-backward-fast");
 globalThis.playPauseButton = document.querySelector(".fa-circle-play");
 globalThis.volumeButton = document.querySelector("#volumeButton");
+globalThis.sonBar = document.querySelector("#sonBar");
+globalThis.mc=new Hammer(volumeButton);
+globalThis.hammertime = new Hammer(sonBar);
 globalThis.playPauseIcon = document.querySelector(".fa-circle-play");
 globalThis.audio = new Audio(playlist[state].mp3);
 globalThis.title = document.createElement("title");
 globalThis.slider = document.querySelector("#slider");
 globalThis.mc = new Hammer(slider);
 
+
+
+
+
 globalThis.newAudio = document.createElement("mp3");
 globalThis.newAudio.src = playlist[state].mp3;
+mc.add(new Hammer.Pan({ direction: Hammer.DIRECTION_VERTICAL, threshold: 0 }));
 
 
 
@@ -36,6 +44,7 @@ function nextTrack() {
   sliderManager("next");
   audioManager("next");
 }
+
 function prevTrack() {
   if (state > 0) {
     state--;
@@ -46,6 +55,7 @@ function prevTrack() {
   audioManager("prev");                          
 }
 
+
 mc.on("swiperight", nextTrack);
 mc.on("swipeleft", prevTrack);
 nextButton.addEventListener("click", nextTrack);
@@ -55,18 +65,8 @@ prevButton.addEventListener("click", prevTrack);
 playPauseButton.addEventListener("click", function () {
   audioManager("playPause");
 }) 
-
-volumeButton.addEventListener("change", function(){
+sonBar.addEventListener("change", function(){
   console.dir(volumeButton.value);
-  volumeManager("range")
-})
-mc.on("panright", function(){
-
-if(audio.volume<1){
-
-
-console.log("panright");
-audio.volume += 0.05;
-volumeButton.value = audio.volume*100;
-}
+  volumeManager("range");
+  
 })
