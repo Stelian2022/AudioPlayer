@@ -25,7 +25,7 @@ globalThis.mc = new Hammer(slider);
 
 globalThis.newAudio = document.createElement("mp3");
 globalThis.newAudio.src = playlist[state].mp3;
-mc.add(new Hammer.Pan({ direction: Hammer.DIRECTION_VERTICAL, threshold: 0 }));
+
 
 
 
@@ -70,11 +70,21 @@ sonBar.addEventListener("change", function(){
   volumeManager("range");
 })
 
-  mc.on("panright", function(){
+  hammertime.on("panright", function(){
     console.log('panright');
     if(audio.volume<1){
 
-      audio.volume+=0.05;
+      audio.volume+=0.01;
+      volumeButton.value=audio.volume*100;
+
+    }
+    
+  })
+  hammertime.on("panleft", function(){
+    console.log('panleft');
+    if(audio.volume>1){
+
+      audio.volume-=0.01;
       volumeButton.value=audio.volume*100;
 
     }
