@@ -17,20 +17,28 @@ function timeManager(timeState) {
   switch (timeState) {
     case "init":
       setTimeout(function () {
-        console.log("timeManager init");
+        console.log("timeManager init", state, audio.duration);
         timeText.innerHTML = "00:00 / " + formatTime(audio.duration);
+        setInterval(() => {
+          //if (audio.paused === false) le ! inverse ma boolean
+          if (!audio.paused) {
+            timeText.innerHTML =
+              formatTime(audio.currentTime) + "/ " + formatTime(audio.duration);
+            timeBar.value = (audio.currentTime / audio.duration) * 100;
+          }
+        }, 1000);
       }, 500);
 
       break;
     case "next":
-       setTimeout(function () {
-         timeText.innerHTML = "00:00 / " + formatTime(audio.duration);
-       }, 500);
+      setTimeout(function () {
+        timeText.innerHTML = "00:00 / " + formatTime(audio.duration);
+      }, 500);
       break;
     case "prev":
       setTimeout(function () {
-         timeText.innerHTML = "00:00 / " + formatTime(audio.duration);
-    }, 500);
+        timeText.innerHTML = "00:00 / " + formatTime(audio.duration);
+      }, 500);
     default:
       break;
   }

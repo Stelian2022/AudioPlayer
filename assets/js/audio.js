@@ -6,7 +6,7 @@
 function audioManager(audioState) {
   //const newAudio = document.createElement("mp3");
   audio.src = playlist[state].mp3;
-  const playPauseIcon = document.querySelector("#play i");
+  // const playPauseIcon = document.querySelector(".fa-pause");
 
   const newTitle = document.createElement("title");
   newTitle.scr = playlist[state].title;
@@ -34,24 +34,25 @@ function audioManager(audioState) {
         console.dir(title);
         audio.play()
         playPauseIcon.classList.toggle("fa-circle-play");
-        playPauseIcon.classList.toggle("fa-circle-pause");
+        playPauseIcon.classList.toggle("fa-pause");
       } else {
         audio.pause()
         playPauseIcon.classList.toggle("fa-circle-play");
-        playPauseIcon.classList.toggle("fa-circle-pause");
+        playPauseIcon.classList.toggle("fa-pause");
       }
+      break;
     case "next":
       if (audio.paused) {
       
         
         audio.play()
         playPauseIcon.classList.toggle("fa-circle-play");
-        playPauseIcon.classList.toggle("fa-circle-pause");
+        playPauseIcon.classList.toggle("fa-pause");
       } else {
         audio.pause()
 
         playPauseIcon.classList.toggle("fa-circle-play");
-        playPauseIcon.classList.toggle("fa-circle-pause");
+        playPauseIcon.classList.toggle("fa-pause");
         audio.play()
       }
       break;
@@ -61,12 +62,12 @@ function audioManager(audioState) {
        
         audio.play()
         playPauseIcon.classList.toggle("fa-circle-play");
-        playPauseIcon.classList.toggle("fa-circle-pause");
+        playPauseIcon.classList.toggle("fa-pause");
       } else {
         audio.pause()
         audio = new Audio(playlist[state].mp3);
         playPauseIcon.classList.toggle("fa-circle-play");
-        playPauseIcon.classList.toggle("fa-circle-pause");
+        playPauseIcon.classList.toggle("fa-pause");
         audio.play()
       }
       break;
